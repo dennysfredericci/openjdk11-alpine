@@ -4,6 +4,11 @@ FROM alpine:3.8
 # Default to UTF-8 file.encoding
 ENV LANG C.UTF-8
 
+
+# Add utilities
+ADD ./util/wait-for-it.sh /util
+
+
 # There might be newer builds, but not all are published (for apline) at: http://jdk.java.net/11/
 
 ENV JAVA_HOME="/jdk-11"
